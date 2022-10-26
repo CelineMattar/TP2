@@ -1,16 +1,42 @@
-#Céline Mattar 403
-#29 septembre 2022
-#TP2
+"""
+Celine Mattar 403
+26 Octobre 2022
+Jeu de devinette
+"""
+
+def chiffre ():
+    global grand_chiffre , petit_chiffre
+    grand_chiffre = int(input ("veuillez definir le plus grand chiffre:"))
+    petit_chiffre = int(input("veuillez definir le plus petit chiffre:"))
+    print(grand_chiffre , petit_chiffre)
+
+
+
+
 
 boucle_jeu = True
 while boucle_jeu:
+    chiffre()
     import random
-    chiffre_random = random.randint (1,15)
-    print("Dans ce jeu vous devriez deviner un chiffre entre 1 et 15. Si vous avez la mauvaises reponse, vous auriez un indice.")
-    reponse = int(input("Ecrivez un chiffre entre 1 et 15"))
-    if reponse == chiffre_random:
-        print("yay")
-    if reponse > chiffre_random :
-        print ("essaye un chiffre plus petit")
-    if reponse < chiffre_random :
-        print ("esaye un chiffre plus grand")
+    nombre_defini = random.randint (grand_chiffre, petit_chiffre)
+    essaie = 1
+    reponse = int(input("devine le chiffre:"))
+    while essaie != nombre_defini:
+        if reponse < nombre_defini:
+            print ("le chiffre est plus plus petit")
+            essaie = + 1
+            reponse = ("essaie une ature fois")
+
+        else:
+            print("le chiffre est plus grand")
+            essaie = essaie + 1
+            reponse = int(input("essaie une autre fois"))
+
+    print("Yay vous avez devinez le bon chiffre !")
+    print("nombre d'essaie" + str(essaie))
+rejouer = (input("voulez vous rejouer: oui non"))
+if rejouer =
+    boucle_jeu = False
+
+
+
