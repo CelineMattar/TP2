@@ -35,8 +35,5 @@ while boucle_jeu:
     print("Yay vous avez devinez le bon chiffre !")
     print("nombre d'essaie" + str(essaie))
 rejouer = (input("voulez vous rejouer: oui non"))
-if rejouer =
-    boucle_jeu = False
-
 
 
